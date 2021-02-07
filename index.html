@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Task list</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="language-btn">
+        <a href="ru/index.html">EN/RU</a>
+      </div>  
+      <h1 class="heading">Task list</h1>
+      <div class="main-header__filter">
+        <label>Filter<br>
+          <select class="filter ascending-setting" name="ascending-todo">
+            <option value="all-todo" selected>All</option>
+            <option value="checked">Done</option>
+            <option value="unchecked">Undone</option>
+          </select>
+        </label>
+
+        <label class="priority">Priority<br>
+          <span>
+          <i class="fas fa-element-arrow fa-angle-down fa-angle-down-left"></i>
+          <i class="fas fa-element-arrow fa-angle-double-down"></i>
+          <i class="fas fa-element-arrow fa-angle-down fa-angle-down-right"></i>
+        </span>
+          <input class="checkbox" type="checkbox" style="display: none;">
+        </label>
+        <label>Search<br>
+          <input class="search-field" type="text" id="mySearch" onkeyup="myFunction()">
+        </label>
+      </div>
+    </header>
+    <main>
+    <ol class="todo-list" id="todoList">
+      <li class="all-todo unchecked">1 - Make an appointment<span class="todo-trash"><i class="fas fa-trash-alt"></i></span></li>
+      <li class="all-todo unchecked">7 - Eat<span class="todo-trash"><i class="fas fa-trash-alt"></i></span></li>
+    </ol>
+
+    <form class="todo-form">
+      <label class="input-label" for="todo-input">Add a task</label>
+      <input type="text" class="todo-input" id="todo-input" required minlength="3">
+      <!-- <button type="button" class="todo-priority is-important">Важная задача</button> -->
+      <label>Task importance level - <span class="todo-range">7</span></label>
+      <input class="range-setting" type="range" min="1" max="9" step="1" value="7">
+      <button type="submit" class="todo-add todo-btn">Add a task</button>
+    </form>
+    <div id="buttons">
+      
+        
+      <button class="save todo-btn">Save</button>
+      <button class="clear todo-btn">Clear</button>
+      <button class="showTips todo-btn">Reference</button>
+    </div>
+    <div id="overlay">
+      <a href="javascript:void(0)" class="closeTips">&times;</a>
+      <ul class="tips">
+         <li>Use the filter to see All tasks, Done tasks, Undone tasks</li>
+         <li>Sort tasks by priority by clicking on the "Priority" arrows</li>
+         <li>Find the required task by starting to write its name in the "Search" field</li>
+         <li>To add a to-do list, write the text in the input field and press Enter or “Add a task"</li>
+         <li>Move the slider to prioritize the task</li>
+         <li>Click on the task to mark it as done</li>
+         <li>To delete one item, hover over it and click on the trash can icon</li>
+         <li>Click Clear to delete all to-do lists</li>
+         <li>Click "Save" to save your to-do list for later</li>
+      </ul>
+   </div>
+   <script src="https://use.fontawesome.com/9af1738128.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/search.js"></script>
+  </main>
+  </body>
+</html>

@@ -1,0 +1,366 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+body {
+   margin: 0 auto;
+   font-family: "Verdana", "Tahoma", sans-serif;
+   font-size: 14px;
+   line-height: 20px;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
+
+   max-width: 580px;
+   padding-bottom: 10px;
+   border-radius: 10px;
+   -webkit-box-shadow: 5px 0px 5px #5c8bf0,
+      -5px 0px 5px #5c8bf0;
+           box-shadow: 5px 0px 5px #5c8bf0,
+      -5px 0px 5px #5c8bf0;
+}
+
+.main-header {
+   padding: 20px 16px 22px;
+   color: #ffffff;
+   background-color: #5c8bf0;
+   text-align: center;
+}
+
+.heading {
+   margin: 0;
+   padding: 20px 16px 22px;
+   font-size: 18px;
+   line-height: 22px;
+   letter-spacing: 0.5px;
+   font-weight: normal;
+   text-transform: uppercase;
+}
+
+.main-header__filter {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-align: end;
+       -ms-flex-align: end;
+           align-items: flex-end;
+}
+
+.main-header__filter label {
+   min-height: 50px;
+   margin-right: 5px;
+   margin-left: 5px;
+   font-weight: 700;
+   width: 150px;
+}
+
+.main-header__filter input,
+.main-header__filter select {
+   width: 100%;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
+   height: 30px;
+   color: #5c8bf0;
+   font-weight: 700;
+   padding: 5px 2px;
+   border-radius: 5px;
+}
+
+.priority,
+.main-header__filter select {
+   cursor: pointer;
+}
+
+.todo-list {
+   margin: 0 0 20px;
+   padding: 0;
+   list-style: none;
+   counter-reset: todos;
+}
+
+.todo-list li {
+   margin-top: 1px;
+   padding: 20px 16px;
+   background-color: #ffffff;
+   color: #5c8bf0;
+   font-weight: 700;
+   cursor: pointer;
+}
+
+.todo-list li:nth-child(2n) {
+   background: #edf1f5;
+}
+
+.todo-list li:hover {
+   background-color: #202679;
+   color: #ffffff;
+}
+
+.todo-list li::before {
+   counter-increment: todos;
+   content: counter(todos);
+   padding: 6px 10px;
+   margin-right: 10px;
+   border: 1px solid #5c8bf0;
+   border-radius: 16px;
+}
+
+span.todo-trash {
+   margin-right: 10px;
+   text-align: center;
+   height: 50px;
+   width: 0;
+   opacity: 0;
+   -webkit-transition: 0.3s;
+   -webkit-transition: 0.3s linear;
+   -o-transition: 0.3s linear;
+   transition: 0.3s linear;
+}
+
+.todo-list li:hover span.todo-trash {
+   width: 100px;
+   opacity: 1.0;
+   margin-left: 10px;
+}
+
+.fa-trash-alt {
+   color: #7f7fd5;
+}
+
+.fa-angle-down-left,
+.fa-angle-double-down,
+.fa-angle-down-right {
+   font-size: 20px;
+   margin-top: 5px;
+}
+
+.todo-form {
+   padding: 0 16px;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+}
+
+.input-label {
+   margin: 0 0 4px;
+   font-size: 10px;
+   line-height: 12px;
+   color: #5c8bf0;
+}
+
+.todo-input {
+   margin-bottom: 12px;
+   padding: 10px 12px;
+   font-family: "Verdana", "Tahoma", sans-serif;
+   font-size: 14px;
+   line-height: 20px;
+   border-radius: 4px;
+   border: 1px solid #5c8bf0;
+}
+
+.todo-form button {
+   margin-bottom: 6px;
+   margin-right: auto;
+   font-size: 12px;
+   line-height: 16px;
+   letter-spacing: 0.5px;
+   text-transform: uppercase;
+   border: none;
+   border-radius: 4px;
+}
+
+.todo-input:focus,
+.todo-form button:focus {
+   outline: 3px solid #bac9f7;
+   outline-offset: 0;
+}
+
+.todo-btn {
+   margin: 5px;
+   padding: 12px 22px;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
+   min-width: 145px;
+   color: #ffffff;
+   font-weight: 700;
+   background-color: #5c8bf0;
+   cursor: pointer;
+}
+.todo-btn:hover {
+   background-color: #447aee;
+}
+
+.todo-btn:active {
+   opacity: 0.5;
+}
+
+.todo-add {
+   margin: 10px auto;
+}
+
+.todo-list .checked {
+   color: gray;
+   font-weight: 400;
+   text-decoration: line-through;
+}
+
+.todos-unchecked:before {
+   content: "";
+   margin-left: 10px;
+   padding-left: 10px;
+   display: inline-block;
+   width: 15px;
+   height: 15px;
+   line-height: 10px;
+   border: 2px solid #86a8e7;
+   background-color: transparent;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
+   border-radius: 50%;
+}
+
+.todos-checked:before {
+   background-color: #86a8e7;
+}
+
+.range-setting {
+   cursor: pointer;
+}
+
+#buttons {
+   text-align: center;
+   margin: 10px auto;
+}
+
+/* Справка */
+#overlay {
+   height: 0;
+   width: 100%;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   background-color: rgb(0, 0, 0);
+   background-color: rgba(0, 0, 0, 0.8);
+   overflow-x: hidden;
+   -o-transition: 0.5s;
+   transition: 0.5s;
+   -webkit-transition: 0.5s;
+}
+
+#overlay .closeTips {
+   position: absolute;
+   top: 15px;
+   right: 40px;
+   font-size: 60px;
+   color: #86a8e7;
+   cursor: pointer;
+}
+
+.tips {
+   padding-right: 30px;
+   padding-left: 30px;
+}
+
+#overlay li {
+   margin-top: 50px;
+   padding: 8px;
+   list-style-type: circle;
+   font-size: 18px;
+   line-height: 20px;
+   color: #818181;
+   display: block;
+}
+
+@media (max-width: 550px) {
+   body {
+      width: 100%;
+      font-size: 12px;
+      line-height: 14px;
+   }
+
+   .main-header__filter label {
+      width: 100px;
+   }
+
+   .main-header__filter input,
+   .main-header__filter select {
+      font-size: 8px;
+      line-height: 10px;
+   }
+   .todo-btn {
+      font-size: 12px;
+      min-width: 95px;
+   }
+
+   .tips {
+   padding-right: 15px;
+   padding-left: 15px;
+}
+
+   #overlay li {
+      margin-top: 10px;
+      padding: 8px;
+      list-style-type: circle;
+      font-size: 12px;
+      line-height: 14px;
+   }
+   
+   #overlay li:first-of-type {
+      margin-top: 45px;
+   }
+
+   #overlay .closeTips {
+      top: 15px;
+      right: 40px;
+      font-size: 40px;
+   }
+   
+   
+}
+
+@media screen and (max-height: 450px) {
+   .overlay a {
+      font-size: 20px
+   }
+
+   .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+   }
+
+   #todo {
+      width: 100%;
+      height: 100%;
+   }
+}
+
+.language-btn {
+   text-align: end;
+   font-size: 8px;
+   line-height: 10px;
+   font-weight: 700;
+   
+}
+.language-btn  a{
+   display: inline-block;
+   min-height: 10px;
+   border-radius: 5px;
+   padding: 2px 3px;
+   border: 1px solid #ffffff;
+   opacity: 0.8;
+   cursor: pointer;
+   color: #ffffff;
+   text-transform: uppercase;
+   text-decoration: none;
+}
