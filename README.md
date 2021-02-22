@@ -1,11 +1,12 @@
 # TODO
 
-DB2Limited Intership. 
+DB2Limited Intership.
 Test - todo web-application
 
 Todo list created using HTML, CSS & JavaScript
 
 This todo list includes following possibilities:
+
 - creating new task
 - mark task as done\undone
 - deleting task
